@@ -98,7 +98,7 @@
                         <label class="radio-group" for="universidad">
                             <input value="universidad" type="radio" checked="true" name="howDidYouFindme"
                                 id="universidad" />
-                                <span class="radio-button"></span>
+                            <span class="radio-button"></span>
                             Universidad
                         </label>
                         <label class="radio-group" for="keepcoding">
@@ -146,6 +146,7 @@
     </div>
 </body>
 <script>
+    // listening any click in the page to reset hamburguer menu
     document.body.addEventListener('click', (event) => {
         const id = event.target.id;
 
@@ -154,6 +155,7 @@
         }
     }, true);
 
+    // avoiding hamburguer menu issues when resizing
     window.addEventListener('resize', () => document.getElementById('hamburguer').checked = false, true);
 
     const observer = new IntersectionObserver(entries => {
