@@ -33,7 +33,15 @@
     <div class="content">
         <main class="center-all">
             <section id="about" class="section">
-                about
+                <span class="title">Estudiante Web Developer</span>
+                <h1>Fatima Garcia</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices, ante placerat
+                    pellentesque
+                    bibendum, massa velit semper felis, ut sodales ex erat nec arcu. In iaculis iaculis lacus, vel
+                    auctor
+                    eros semper at. Curabitur sit amet dignissim sapien, id blandit orci. Quisque ac quam a mauris
+                    molestie
+                    rutrum.</p>
             </section>
             <section id="skills" class="section">
                 skills
@@ -68,6 +76,8 @@
             document.getElementById('hamburguer').checked = false;
         }
     }, true);
+
+    window.addEventListener('resize', () => document.getElementById('hamburguer').checked = false, true)
 </script>
 
 </html>
