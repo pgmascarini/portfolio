@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #f6e7ea;
+  padding: 15px;
+}
+
+.center-all {
+  margin: auto;
+  max-width: 1280px;
+  min-width: 250px;
+  width: 100%;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hamburguer-checkbox {
+  cursor: pointer;
+  display: block;
+  height: 35px;
+  left: -5px;
+  position: absolute;
+  opacity: 0;
+  width: 40px;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+.hamburguer-checkbox:checked ~ .menu-items {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburguer-icon {
+  fill: #d9a1ad;
+  width: 30px;
+}
+
+.menu-items {
+  position: absolute;
+  top: 70px;
+  opacity: 0;
+}
+
+.menu-items li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.menu-items li a {
+  color: #1d1d24;
+  padding: 5px 0;
+  position: relative;
+}
+
+.button {
+  background: #d9a1ad;
+  border: 2px solid #dfb7be;
+  border-radius: 100px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 12px 30px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .hamburguer-checkbox,
+  .hamburguer-icon {
+    display: none;
+  }
+
+  .menu-items {
+    opacity: 1;
+    position: relative;
+    top: auto;
+  }
+
+  .menu-items li {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+
+  .menu-items li a:hover {
+    color: #fd4766;
+  }
+
+  .menu-items li a:after {
+    background: #ceacb2;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transition: 0.3s;
+    width: 0;
+  }
+
+  .menu-items li a:hover:after {
+    width: 100%;
+  }
+
+  .button:hover {
+    background: transparent;
+    border-color: #f1abb7;
+    color: #dd8896;
+    transition: all 0.4s ease-in-out;
+  }
+}
