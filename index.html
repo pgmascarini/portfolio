@@ -71,8 +71,60 @@
                     <span class="percentage" style="width: 30%;"></span>
                 </span>
             </section>
-            <section id="contact" class="section">
-                contact
+            <section id="contact" class="section contact">
+                <h2>Contacto</h2>
+                <form action="javascript:alert('Enviando formulario')">
+                    <label class="form-group" for="name">
+                        Nombre
+                        <input type="text" name="name" id="name" placeholder="Pon tu nombre" required />
+                    </label>
+                    <label class="form-group" for="surname">
+                        Apellido
+                        <input type="text" name="surname" id="surname" placeholder="Pon tu apellido" required />
+                    </label>
+                    <label class="form-group" for="phone">
+                        Teléfono
+                        <input type="tel" name="phone" id="phone" placeholder="Número de teléfono" required
+                            pattern="(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}" />
+                    </label>
+                    <label class="form-group" for="githubUsername">
+                        Github username
+                        <input type="tel" name="githubUsername" id="githubUsername"
+                            placeholder="Con este formato (@<username>)" pattern="^@\w(-\w|\w\w|\w){0,19}$" />
+                    </label>
+
+                    <fieldset>
+                        <legend>¿Cómo me conociste?</legend>
+                        <label class="radio-group" for="universidad">
+                            <input value="universidad" type="radio" checked="true" name="howDidYouFindme"
+                                id="universidad" />
+                                <span class="radio-button"></span>
+                            Universidad
+                        </label>
+                        <label class="radio-group" for="keepcoding">
+                            <input value="keepcoding" type="radio" name="howDidYouFindme" id="keepcoding" />
+                            <span class="radio-button"></span>
+                            Keepcoding kick-off
+                        </label>
+                        <label class="radio-group" for="colegio">
+                            <input value="colegio" type="radio" name="howDidYouFindme" id="colegio" />
+                            <span class="radio-button"></span>
+                            Colegio
+                        </label>
+                        <label class="radio-group" for="github">
+                            <input value=" github" type="radio" name="howDidYouFindme" id="github" />
+                            <span class="radio-button"></span>
+                            Github
+                        </label>
+                    </fieldset>
+                    <label class="form-group" for="moreInfo">
+                        Más información
+                        <textarea name="moreInfo" id="moreInfo" maxlength="180" required
+                            placeholder="Que mas quiere saber"></textarea>
+                    </label>
+
+                    <button class="button" type="submit">Enviar</button>
+                </form>
             </section>
         </main>
         <footer id="medias" class="footer">
