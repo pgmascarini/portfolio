@@ -12,21 +12,62 @@
     <header class="header">
         <div class="center-all">
             <nav class="header-nav">
-                <input class="hamburguer-checkbox" type="checkbox" />
+                <input id="hamburguer" class="hamburguer-checkbox" type="checkbox" />
                 <svg class="hamburguer-icon" viewBox="0 0 100 80" width="40" height="40">
                     <rect width="100" height="20"></rect>
                     <rect y="30" width="100" height="20"></rect>
                     <rect y="60" width="100" height="20"></rect>
                 </svg>
                 <ul class="menu-items">
-                    <li><a href="#">Proyectos</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#about" onclick="document.getElementById('hamburguer').checked = false">Sobre mi</a>
+                    </li>
+                    <li><a href="#skills" onclick="document.getElementById('hamburguer').checked = false">Mis
+                            habilidads</a></li>
+                    <li><a href="#contact" onclick="document.getElementById('hamburguer').checked = false">Contacto</a>
+                    </li>
                 </ul>
-                <a href="#" class="button">Sigame</a>
+                <a href="#medias" class="button">Sigame</a>
             </nav>
         </div>
     </header>
+    <div class="content">
+        <main class="center-all">
+            <section id="about" class="section">
+                about
+            </section>
+            <section id="skills" class="section">
+                skills
+            </section>
+            <section id="contact" class="section">
+                contact
+            </section>
+        </main>
+        <footer id="medias" class="footer">
+            <div class="center-all">
+                <a href="https://twitter.com" class="icon twitter">
+                    <span class="sr-only">twitter</span>
+                </a>
+                <a href="https://instagram.com" class="icon instagram">
+                    <span class="sr-only">instagram</span>
+                </a>
+                <a href="https://facebook.com" class="icon facebook">
+                    <span class="sr-only">facebook</span>
+                </a>
+                <a href="https://linkedin.com" class="icon linkedin">
+                    <span class="sr-only">linkedin</span>
+                </a>
+            </div>
+        </footer>
+    </div>
 </body>
+<script>
+    document.body.addEventListener('click', (event) => {
+        const id = event.target.id;
+
+        if (id !== 'hamburguer') {
+            document.getElementById('hamburguer').checked = false;
+        }
+    }, true);
+</script>
 
 </html>

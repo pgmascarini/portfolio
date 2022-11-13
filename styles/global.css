@@ -13,13 +13,18 @@ a {
 
 .header {
   background-color: #f6e7ea;
-  padding: 15px;
+  height: 10vh;
+  min-height: 75px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .center-all {
   margin: auto;
   max-width: 1280px;
   min-width: 250px;
+  padding: 15px;
   width: 100%;
 }
 
@@ -43,8 +48,11 @@ a {
 }
 
 .hamburguer-checkbox:checked ~ .menu-items {
+  background: #fff;
+  height: 90vh;
   opacity: 1;
   transition: all 0.5s ease-in-out;
+  width: 100%;
 }
 
 .hamburguer-icon {
@@ -80,6 +88,60 @@ a {
   letter-spacing: 2px;
   padding: 12px 30px;
   text-transform: uppercase;
+}
+
+.content {
+  height: 90vh;
+  margin-top: 10vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.section {
+  min-height: 600px;
+  padding: 50px 0;
+}
+
+.footer {
+  background-color: #f6e7ea;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.icon {
+  background-image: url(../images/media_sprites.png);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  display: inline-block;
+  height: 35px;
+  margin: 0 5px;
+  width: 35px;
+}
+
+.twitter {
+  background-position-x: left;
+  background-position-y: bottom;
+}
+
+.instagram {
+  background-position-x: left;
+  background-position-y: top;
+}
+
+.facebook {
+  background-position-x: right;
+  background-position-y: top;
+}
+
+.linkedin {
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+.sr-only {
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
